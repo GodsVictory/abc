@@ -3,16 +3,16 @@ entries:
   app:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-11-05T11:54:37.842216842-06:00"
+    created: "2024-11-05T12:53:33.740313826-06:00"
     dependencies:
     - name: node
       repository: https://charts.bitnami.com/bitnami
       version: 19.1.7
     description: A Helm chart for Kubernetes
-    digest: 3f5ba13d394cc6e3c771c064ea253cc0b03f52e5edfdcc063d23df79a7909412
+    digest: 5bf5c3a68f5cd532c0d824f28e20aaa5dcf9fc4268e1793d395e575b2e8de3ee
     name: app
     type: application
     urls:
     - app-0.0.1.tgz
     version: 0.0.1
-generated: "2024-11-05T11:54:37.841882305-06:00"
+generated: "2024-11-05T12:53:33.731720656-06:00"
