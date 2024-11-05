@@ -1,3 +1,2 @@
-node:
-  mongodb:
-    enabled: false
+mongodb:
+  enabled: false
