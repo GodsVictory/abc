@@ -6,7 +6,7 @@ deployment:
 
 image:
   repository: ghcr.io/godsvictory/app
-  tag: v1.0.5
+  tag: v1.0.9
   pullPolicy: Always
 
 service:
