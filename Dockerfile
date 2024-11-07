@@ -6,5 +6,4 @@ USER node
 RUN npm install
 COPY --chown=node:node src/ .
 EXPOSE 8080
-ENV PORT=8080
 CMD [ "node", "index.js" ]
