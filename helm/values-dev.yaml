@@ -1,27 +1,20 @@
 replicaCount: 1
-
 deployment:
   annotations: {}
-
 image:
   repository: ghcr.io/godsvictory/app
-  tag: latest
+  tag: main@${DIGEST}
   pullPolicy: Always
-
 service:
   type: ClusterIP
   port: 3000
-
 ingress:
   enabled: true
   annotations: {}
-    # kubernetes.io/ingress.class: nginx
-    # kubernetes.io/tls-acme: "false"
   className: nginx
   path: /
   hosts:
     - node-dev.home
-
 resources:
   limits:
     cpu: 300m
@@ -29,9 +22,6 @@ resources:
   requests:
     cpu: 100m
     memory: 128Mi
-
 nodeSelector: {}
-
 tolerations: []
-
 affinity: {}
