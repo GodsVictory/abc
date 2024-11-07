@@ -1,9 +1,7 @@
 replicaCount: 1
 
 deployment:
-  annotations:
-    argocd-image-updater.argoproj.io/image-list: app=ghcr.io/godsvictory/app
-    argocd-image-updater.argoproj.io/app.update-strategy: latest
+  annotations: {}
 
 image:
   repository: ghcr.io/godsvictory/app
