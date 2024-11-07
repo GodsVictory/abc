@@ -1,6 +1,7 @@
 replicaCount: 1
 deployment:
   annotations: {}
+  environment: dev
 image:
   repository: ghcr.io/godsvictory/app
   tag: main@sha256:5371eb9e99a7fcb93a31a030687186a51680372cc9fdd19a2c37b3033ecc3293

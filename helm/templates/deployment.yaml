@@ -30,6 +30,8 @@ spec:
           env:
           - name: PORT
             value: "{{ .Values.service.port }}"
+          - name: ENVIRONMENT
+            value: "{{ .Values.deployment.environment }}"
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}

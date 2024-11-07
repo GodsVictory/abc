@@ -2,6 +2,7 @@ replicaCount: 1
 
 deployment:
   annotations: {}
+  environment: test
 
 image:
   repository: ghcr.io/godsvictory/app
