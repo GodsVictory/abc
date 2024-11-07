@@ -4,7 +4,7 @@ const environment = process.env.ENVIRONMENT || "";
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
-  const msg = `Hello Node! Current environment: ${environment}\n`
+  const msg = `Hello Node!\nCurrent environment: ${environment}\nService B`
   res.end(msg);
 });
 
