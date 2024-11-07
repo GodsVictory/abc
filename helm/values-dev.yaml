@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: ghcr.io/godsvictory/app
-  tag: main
+  tag: latest
   pullPolicy: Always
 
 service:
