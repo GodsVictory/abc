@@ -111,3 +111,4 @@ jobs:
           commitChange: true
           branch: main
           masterBranchName: main
+          targetBranch: main
