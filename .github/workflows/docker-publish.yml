@@ -109,3 +109,5 @@ jobs:
           propertyPath: 'image.tag'
           value: main@${DIGEST}
           commitChange: true
+          branch: main
+          masterBranchName: main
