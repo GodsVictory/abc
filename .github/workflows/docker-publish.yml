@@ -108,7 +108,4 @@ jobs:
           valueFile: 'helm/values-dev.yaml'
           propertyPath: 'image.tag'
           value: main@${DIGEST}
-          commitChange: false
-          branch: main
-          masterBranchName: main
           commitChange: true
