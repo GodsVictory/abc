@@ -112,3 +112,4 @@ jobs:
           branch: main
           masterBranchName: main
           targetBranch: main
+          token: ${{ secrets.PUSH_TOKEN }}
