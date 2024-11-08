@@ -30,7 +30,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: set-files
-        run: echo "file=$(ls src/ | jq -R -s -c 'split("\n")[:-1]')" >> $GITHUB_OUTPUT
+        run: echo "file=$(ls src/ | jq -R -s -c 'split("\n")[:-1]')" >> "$GITHUB_OUTPUT"
+      - run: echo "file=$(ls src/ | jq -R -s -c 'split("\n")[:-1]')"
+        
   build:
     strategy:
       matrix:
