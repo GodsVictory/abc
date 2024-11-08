@@ -30,8 +30,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: set-files
-        run: echo "file=$(ls src/ | jq -R -s -c 'split("\n")[:-1]')" >> "$GITHUB_OUTPUT"
-      - run: echo "file=$(ls src/ | jq -R -s -c 'split("\n")[:-1]')"
+        run: 
+          delimiter="$(openssl rand -hex 8)"
+          JSON="$(ls src/ | jq -R -s -c 'split("\n")[:-1]')"
+          echo "file<<${delimiter}" >> "${GITHUB_OUTPUT}"
+          echo "$JSON" >> "${GITHUB_OUTPUT}"
+          echo "${delimiter}" >> "${GITHUB_OUTPUT}"
         
   build:
     strategy:
