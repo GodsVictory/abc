@@ -30,7 +30,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: set-files
-        run: 
+        run: |
           delimiter="$(openssl rand -hex 8)"
           JSON="$(ls src/ | jq -R -s -c 'split("\n")[:-1]')"
           echo "file<<${delimiter}" >> "${GITHUB_OUTPUT}"
