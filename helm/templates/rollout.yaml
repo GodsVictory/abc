@@ -44,6 +44,8 @@ spec:
             value: "{{ .Values.service.port }}"
           - name: ENVIRONMENT
             value: "{{ .Values.deployment.environment }}"
+          - name: VERSION
+            value: "{{ .Values.image.tag }}"
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}
