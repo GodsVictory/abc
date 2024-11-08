@@ -27,9 +27,9 @@ jobs:
   build:
     strategy:
       matrix:
-        service-dir:
-        - src/service-a
-        - src/service-b
+        service:
+        - service-a
+        - service-b
 
     runs-on: ubuntu-latest
     permissions:
@@ -80,6 +80,7 @@ jobs:
             type=ref,event=tag
             type=ref,event=pr
             type=sha,prefix=,format=long
+            type=raw,${{ matrix.service }}
 
       # Build and push Docker image with Buildx (don't push on PR)
       # https://github.com/docker/build-push-action
@@ -87,7 +88,7 @@ jobs:
         id: build-and-push
         uses: docker/build-push-action@0565240e2d4ab88bba5387d719585280857ece09 # v5.0.0
         with:
-          context: ${{ matrix.service-dir }}
+          context: src/${{ matrix.service }}
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
