@@ -5,7 +5,7 @@ const version = process.env.VERSION || "";
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
-  const msg = `Hello Node!\nCurrent environment: ${environment}\nVersion: ${version}\n\n`
+  const msg = `Hello Node!\nCurrent environment: ${environment}\nVersion: ${version}\n\nshane`
   res.end(msg);
 });
 
