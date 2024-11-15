@@ -1,13 +1,11 @@
 {{- if .Values.ingress.enabled -}}
-{{- $fullName := include "tmf635-usage.fullname" . -}}
-{{- $ingressPath := .Values.ingress.path -}}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: {{ $fullName }}
+  name: {{ .Chart.Name }}
   labels:
-    app: {{ template "tmf635-usage.name" . }}
-    chart: {{ template "tmf635-usage.chart" . }}
+    app: {{ .Chart.Name }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 {{- with .Values.ingress.annotations }}
@@ -31,11 +29,11 @@ spec:
     - host: {{ . }}
       http:
         paths:
-          - path: {{ $ingressPath }}
+          - path: {{ .Values.ingress.path }}
             pathType: Prefix
             backend:
               service:
-                name: {{ $fullName }}
+                name: {{ .Chart.Name }}
                 port:
                   number: {{ $.Values.service.port }}
   {{- end }}

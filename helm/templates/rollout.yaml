@@ -1,10 +1,10 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: {{ template "tmf635-usage.fullname" . }}
+  name: {{ .Chart.Name }}
   labels:
-    app: {{ template "tmf635-usage.name" . }}
-    chart: {{ template "tmf635-usage.chart" . }}
+    app: {{ .Chart.Name }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 {{- with .Values.deployment.annotations }}
@@ -15,7 +15,7 @@ spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ template "tmf635-usage.name" . }}
+      app: {{ .Chart.Name }}
       release: {{ .Release.Name }}
   strategy:
     canary:
@@ -32,7 +32,7 @@ spec:
   template:
     metadata:
       labels:
-        app: {{ template "tmf635-usage.name" . }}
+        app: {{ .Chart.Name }}
         release: {{ .Release.Name }}
     spec:
       containers:
