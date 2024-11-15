@@ -1,9 +1,5 @@
-# Node Hello World
+# Demo Weather app
 
-Simple node.js app that servers "hello world"
+This is a static HTML site that shows weather for the given location.
 
-Great for testing simple deployments to the cloud
-
-## Run It
-
-`npm start`
+The purpose for this repo is for ArgoCD and GitOps demonstrations
