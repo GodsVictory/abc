@@ -33,7 +33,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: {{ .Chart.Name }}
+                name: {{ $.Chart.Name }}
                 port:
                   number: {{ $.Values.service.port }}
   {{- end }}
