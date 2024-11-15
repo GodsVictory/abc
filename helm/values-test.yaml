@@ -5,7 +5,7 @@ deployment:
   environment: test
 
 image:
-  repository: ghcr.io/godsvictory/app
+  repository: ghcr.io/godsvictory/abc
   tag: latest
   pullPolicy: Always
 
