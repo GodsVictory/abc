@@ -1,0 +1,1 @@
+import{_ as e,o,c as s,a as c}from"./index-23073edd.js";const t={},a=c("h1",null,"This is a hourly page",-1),n=[a];function r(_,l){return o(),s("div",null,n)}const d=e(t,[["render",r]]);export{d as default};
