@@ -25,4 +25,3 @@ env:
 jobs:
   call-workflow-passing-data:
     uses: GodsVictory/GitOps/.github/workflows/docker-publish.yml@main
-    secrets: inherit
