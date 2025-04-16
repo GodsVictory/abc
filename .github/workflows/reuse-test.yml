@@ -25,5 +25,4 @@ env:
 jobs:
   call-workflow-passing-data:
     uses: GodsVictory/GitOps/.github/workflows/docker-publish.yml@main
-    secrets:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    secrets: inherit
